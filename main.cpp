@@ -23,7 +23,7 @@ void show_all_phone_numbers(DIR **dir,dirent **current)
      cout<<(*current)->d_name<<endl;
     ifstream pointerinfile((*current)->d_name);
     long int mobilenumber;                   //assuming mobile number stored as a type 9856982325 long integer
-    while(cin>>mobilenumber){
+    while(pointerinfile>>mobilenumber){
         cout<<mobilenumber<<endl;}
 
         *current=readdir(*dir);
